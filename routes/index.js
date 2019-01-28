@@ -1,9 +1,12 @@
 const path = require('path');
 const router = require('express').Router();
-const apiRoutes = require('./api');
+const searchRoutes = require('./search');
+const saveRoutes = require('./save');
 
 // API Routes
-router.use('/api', apiRoutes);
+router.use('/search', searchRoutes);
+router.use('/api', saveRoutes);
+
 
 // If no API routes are hit, send the React app
 // Define any API routes before this runs
