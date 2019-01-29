@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Section from "../components/Section";
 import Form from "../components/Form";
+import Card from "../components/Card";
 import API from "../utils/API";
 
 class Search extends Component {
@@ -68,6 +69,11 @@ class Search extends Component {
 
                 <Section>
                     <legend className="uk-legend">Result</legend>
+                    {/* {this.state.result.map(item => (
+                        <Card title={item.title} author={item.author}></Card>
+                    ))} */}
+
+<Card title="item.title" author="item.author"></Card>
                 </Section>
             </div>
         );
