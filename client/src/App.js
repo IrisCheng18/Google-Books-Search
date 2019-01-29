@@ -5,16 +5,18 @@ import {
   Link,
   Switch
 } from "react-router-dom";
-import Navbar from "../src/components/Navbar.js"
+import Navbar from "../src/components/Navbar"
+
 
 import Search from "./pages/Search";
 import Save from "./pages/Save";
+
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
+        <div className="uk-container uk-container-large">
           <Navbar>
             <li>
               <Link to="/">Home</Link>
@@ -22,11 +24,10 @@ class App extends Component {
             <li>
               <Link to="/save">Save</Link>
             </li>
-
           </Navbar>
-          <ul>
 
-          </ul>
+          
+
           <Switch>
             {"Your routes go here!"}
             <Route exact path="/" component={Search} />
