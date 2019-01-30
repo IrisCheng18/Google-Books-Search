@@ -67,14 +67,20 @@ class Search extends Component {
                     </Form>
                 </Section>
 
-                <Section>
-                    <legend className="uk-legend">Result</legend>
-                    {/* {this.state.result.map(item => (
-                        <Card title={item.title} author={item.author}></Card>
-                    ))} */}
-
-<Card title="item.title" author="item.author"></Card>
-                </Section>
+                {this.state.result.length > 0 &&
+                    <Section>
+                        <legend className="uk-legend">Result</legend>
+                        {this.state.result.map(item => (
+                            <Card
+                                key={item.title}
+                                title={item.title}
+                                author={item.author}
+                                image={item.image}
+                                description={item.description}
+                            ></Card>
+                        ))}
+                    </Section>
+                }
             </div>
         );
     };
