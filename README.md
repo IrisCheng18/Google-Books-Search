@@ -1,3 +1,3 @@
 # Google-Books-Search
 
-https://dashboard.heroku.com/apps/google-book-search-react/deploy/github
+https://google-book-search-react.herokuapp.com/
