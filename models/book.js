@@ -5,8 +5,8 @@ const bookSchema = new Schema({
     title: { type: String, required: true },
     author: { type: String },
     description: { type: String },
-    image: { type: String },
-    link: { type: String },
+    image: { type: String, default: "http://via.placeholder.com/100" },
+    link: { type: String},
     date: { type: Date, default: Date.now }
 });
 

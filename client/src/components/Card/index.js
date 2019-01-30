@@ -7,8 +7,12 @@ function Card(props) {
             <div className="uk-card uk-card-secondary uk-card-body">
                 <h3 className="uk-card-title">
                     {props.title}
-                    <button className="uk-button uk-button-default uk-button-small uk-float-right uk-margin-left">Delete</button>
-                    <button className="uk-button uk-button-default uk-button-small uk-float-right uk-margin-left">View</button>
+
+                    {props.children}
+
+                    <button className="uk-button uk-button-default uk-button-small uk-float-right uk-margin-left">
+                        <a href={props.link} target="_blank" rel="noopener noreferrer">View</a>
+                    </button>
                 </h3>
 
                 <p>Written by {props.author}</p>

@@ -35,11 +35,12 @@ router.get('/:searchTerm', (req, res) => {
             const result = [];
             for (let i = 0; i < response.data.items.length; i++) {
                 const info = response.data.items[i]["volumeInfo"];
+
                 result.push({
                     title: info.title,
                     author: info.authors[0],
                     description: info.description,
-                    image: info.imageLinks.thumbnail,
+                    image: ("imageLinks" in info) ? info.imageLinks.thumbnail : "http://via.placeholder.com/100",
                     link: info.previewLink
                 });
             };
